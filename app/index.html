@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI · All 55 Trophies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23d24e2a'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='white' font-family='Georgia'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Official trophy list, 2026-11-18</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Every one of the 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a guide in our own words, a roadmap to the platinum, and a tracker that saves your progress in this browser. Works offline; it loads nothing from the network.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="big-count"><span id="earnedCount">0</span> <span class="of">/ 55</span></p>
+    <p class="progress-label" id="progressText">0 of 55 earned</p>
+    <div class="bar"><div class="bar-fill" id="progressBar" style="width:0%"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables</button>
+  <button type="button" class="tab" data-view="about">About &amp; Sources</button>
+</nav>
+
+<section id="view-checklist" class="view">
+  <div class="controls">
+    <label class="search">Search <input id="searchInput" type="search" placeholder="Trophy name, mission, activity…" autocomplete="off"></label>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="all">All kinds</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="missable">Missable</button>
+      <button type="button" class="chip" data-kind="side">Side strands</button>
+      <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="chip" data-kind="activities">Activities</button>
+      <button type="button" class="chip" data-kind="platinum">Platinum</button>
+    </div>
+    <label>Grade <select id="gradeFilter"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label>Status <select id="statusFilter"><option value="all">All</option><option value="earned">Earned</option><option value="remaining">Remaining</option></select></label>
+    <label class="spoiler"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+    <div class="save-actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import">Import progress <input id="importInput" type="file" accept="application/json"></label>
+      <button id="resetBtn" type="button">Reset</button>
+    </div>
+  </div>
+  <p class="results-line" id="resultsLine"></p>
+  <div class="layout">
+    <div class="list" id="list" aria-live="polite"></div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" hidden>
+  <p class="view-intro">The order to earn them in, built from the official descriptions. Do the story first, then the side strands, then the activities and collectibles — and save 100% completion for last, since it sweeps up most of the long grinds on the way. Click any trophy to open its guide in the checklist.</p>
+  <div id="roadmap"></div>
+</section>
+
+<section id="view-missables" class="view" hidden>
+  <div class="callout">
+    <strong>How these flags were built.</strong> Every flag below comes from the trophy's official description alone — a trophy is flagged when its description ties it to a specific story mission or a one-time event. The game is a day old and mission replayability is <strong>not yet confirmed</strong>, so these are warnings, not verified facts: do the flagged trophies while the moment is available, and keep a save before big story beats.
+  </div>
+  <div id="missables"></div>
+</section>
+
+<section id="view-about" class="view" hidden>
+  <h2>About this guide</h2>
+  <p>This is a free, open-source, offline trophy guide and tracker for Grand Theft Auto VI on PlayStation 5. It covers all 55 official trophies with their names, descriptions and grades exactly as PlayStation publishes them, and a guide to each in our own words.</p>
+  <h3>Where the facts come from</h3>
+  <ul>
+    <li>Trophy names, descriptions and grades: the official PlayStation 5 list, as listed by <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> — the two sources agree on every name, description and grade.</li>
+    <li>PSN progress counts (such as 42 Shooting Range challenges): <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>.</li>
+    <li>Every guide method: our own advice drawn from the official description. Where the description does not pin a place or a step down, the guide says so plainly instead of inventing one — the game released on 19 November 2026 and the exact methods have not been checked in the game yet.</li>
+  </ul>
+  <h3>How the tracker works</h3>
+  <p>Tick a trophy off and it stays ticked: progress is saved in your browser (localStorage) and never leaves your machine. Export downloads your progress as a JSON file; import reads one back. The spoiler setting hides the names and descriptions of story trophies until you earn them. The guide loads no file from outside this folder and makes no network request — it works with the network off.</p>
+  <h3>Honesty note</h3>
+  <p>Four trophies have triggers the official description does not spell out — Challenging Tank, Personal Best, Bad Luck, I Guess, and The Truth Is Out There. Their guides say what the description suggests and flag the uncertainty rather than guessing a method as fact. When the community confirms those triggers, this guide should be updated to name them.</p>
+  <p class="fineprint">Grand Theft Auto and GTA are trademarks of Take-Two Interactive. This guide is an independent, unofficial work: no Rockstar Games logo, artwork or game screenshots are used, and the look is our own. Built for the make.fun gta6-trophy-guide-01 competition.</p>
+</section>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
